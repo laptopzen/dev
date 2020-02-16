@@ -45,8 +45,8 @@ olah_isi = () => {
 
 olah_isi()
 
-$('.navbar-brand').click(() => {
-	ambil_json.abort() // skrip nggak berfungsi
-	$('.isi').html('Loading...')
-	olah_isi()
-})
+// $('.navbar-brand').click(() => {
+// 	ambil_json.abort() // skrip nggak berfungsi
+// 	$('.isi').html('Loading...')
+// 	olah_isi()
+// })
