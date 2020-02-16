@@ -1,0 +1,1 @@
+Ini adalah repositori dari <https://mzaini30.com/dev>.
