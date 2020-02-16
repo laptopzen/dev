@@ -24,7 +24,7 @@ $('.isi').html(data_acak.map(x => `
 				</td>
 				<td>
 					<div class="panel panel-default">
-						<div class="panel-heading">${x.title}</div>
+						<div class="panel-heading">${x.title} (<em>by ${x.user.name}</em>)</div>
 						<div class="panel-body">${x.description}</div>
 					</div>
 				</td>
