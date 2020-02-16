@@ -11,7 +11,6 @@ baca = [
 kosong = () => baca[Math.floor(Math.random() *  baca.length)]
 
 olah_isi = () => {
-	banyak = 0
 	$.get('https://dev.to/api/articles', data => banyak = data[0].id)
 
 	mau_diambil = 30
