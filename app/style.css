@@ -31,3 +31,7 @@ body {
 .table-ajaib {
 	margin-bottom: 0;
 }
+
+.navbar-brand {
+	cursor: pointer;
+}
