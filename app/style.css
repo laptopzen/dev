@@ -1,3 +1,33 @@
 * {
 	word-wrap: break-word;
 }
+
+body {
+	padding-top: 70px;
+}
+
+.anggap-aja-bukan-link,
+.anggap-aja-bukan-link:hover,
+.anggap-aja-bukan-link:active,
+.anggap-aja-bukan-link:focus,
+.anggap-aja-bukan-link:visited {
+	text-decoration: none;
+	color: #333;
+}
+
+.table-ajaib,
+.table-ajaib td {
+	border: none !important;
+}
+
+.table-ajaib img {
+	width: 50px;
+}
+
+.table-ajaib td:nth-child(2) {
+	width: 100%;
+}
+
+.table-ajaib {
+	margin-bottom: 0;
+}
