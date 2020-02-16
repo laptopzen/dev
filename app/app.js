@@ -11,9 +11,9 @@ baca = [
 kosong = () => baca[Math.floor(Math.random() *  baca.length)]
 
 olah_isi = () => {
-	ambil_json = $.get('https://dev.to/api/articles?per_page=1', data => banyak = data[0].id)
+	$.get('https://dev.to/api/articles?per_page=1', data => banyak = data[0].id)
 
-	mau_diambil = 30
+	mau_diambil = 20
 
 	list_artikel_acak = [];
 	while(list_artikel_acak.length < mau_diambil){
@@ -24,7 +24,7 @@ olah_isi = () => {
 	$('.isi').html('')
 
 	for(y of list_artikel_acak){
-		ambil_json = $.get(`https://dev.to/api/articles/${y}`, x => $('.isi').append(`
+		$.get(`https://dev.to/api/articles/${y}`, data => $('.isi').html(data.map(x => `
 			<a href="${x.url}" class="anggap-aja-bukan-link" target='_blank'>
 				<table class="table table-ajaib">
 					<tr>
@@ -45,8 +45,7 @@ olah_isi = () => {
 
 olah_isi()
 
-// $('.navbar-brand').click(() => {
-// 	ambil_json.abort() // skrip nggak berfungsi
-// 	$('.isi').html('Loading...')
-// 	olah_isi()
-// })
+$('.navbar-brand').click(() => {
+	$('.isi').html('Loading...')
+	olah_isi()
+})
