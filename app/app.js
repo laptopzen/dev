@@ -44,3 +44,8 @@ olah_isi = () => {
 }
 
 olah_isi()
+
+$('.navbar-brand').click(() => {
+	$('.isi').html('Loading...')
+	olah_isi()
+})
