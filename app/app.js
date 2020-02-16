@@ -15,6 +15,16 @@ for(x of list_artikel_acak){
 	$.get(`https://dev.to/api/articles/${x}`, data => data_acak.push(data))
 }
 
+baca = [
+	'I think, you can love it',
+	'I was explain this',
+	'Wow. It\'s crazy',
+	"It's very cool",
+	"Wow. I'll try this"
+]
+
+kosong = () => baca[Math.floor(Math.random() *  baca.length)]
+
 $('.isi').html(data_acak.map(x => `
 	<a href="${x.url}" class="anggap-aja-bukan-link" target='_blank'>
 		<table class="table table-ajaib">
@@ -25,7 +35,7 @@ $('.isi').html(data_acak.map(x => `
 				<td>
 					<div class="panel panel-default">
 						<div class="panel-heading">${x.title} ~ <em>by ${x.user.name}</em></div>
-						<div class="panel-body">${x.description}</div>
+						<div class="panel-body">${x.description ? x.description : kosong()}</div>
 					</div>
 				</td>
 			</tr>
