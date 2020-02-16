@@ -23,7 +23,6 @@ olah_isi = () => {
 
 	$('.isi').html('')
 
-	// data_acak = []
 	for(y of list_artikel_acak){
 		$.get(`https://dev.to/api/articles/${y}`, x => $('.isi').append(`
 			<a href="${x.url}" class="anggap-aja-bukan-link" target='_blank'>
@@ -42,28 +41,6 @@ olah_isi = () => {
 				</table>
 			</a>`))
 	}	
-
-	// $('.isi').html(data_acak.map(x => `
-	// 	<a href="${x.url}" class="anggap-aja-bukan-link" target='_blank'>
-	// 		<table class="table table-ajaib">
-	// 			<tr>
-	// 				<td>
-	// 					<img src="${x.user.profile_image_90}" alt="">
-	// 				</td>
-	// 				<td>
-	// 					<div class="panel panel-default">
-	// 						<div class="panel-heading">${x.title} ~ <em>by ${x.user.name}</em></div>
-	// 						<div class="panel-body">${x.description ? x.description : kosong()}</div>
-	// 					</div>
-	// 				</td>
-	// 			</tr>
-	// 		</table>
-	// 	</a>`))
 }
 
 olah_isi()
-
-$('.navbar-brand').click(() => {
-	$('.isi').html('Loading...')
-	olah_isi()
-})
