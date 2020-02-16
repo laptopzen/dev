@@ -2,7 +2,7 @@ $.ajaxSetup({async: false})
 
 $.get('https://dev.to/api/articles', data => banyak = data[0].id)
 
-mau_diambil = 10
+mau_diambil = 30
 
 list_artikel_acak = [];
 while(list_artikel_acak.length < mau_diambil){
